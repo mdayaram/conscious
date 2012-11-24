@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -z $1 ]; then
+	echo "Need at least one argument."
+	echo "hostname or ip address of target pkeet."
+	echo ""
+	exit 1
+fi
+
+nc $1 1337
