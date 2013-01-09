@@ -1,0 +1,16 @@
+#!/bin/bash
+
+OS=`uname`
+if [ "$OS" == "Linux" ]; then
+	SAY="espeak"
+elif [ "$OS" == "Darwin" ]; then
+	SAY="say"
+else
+	echo "Sorry, this operating system is not supported."
+	echo ""
+	exit 1
+fi
+
+while true; do
+	nc -l localhost 1337 | eval $SAY
+done

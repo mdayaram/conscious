@@ -1,5 +1,0 @@
-#!/bin/bash
-
-while true; do
-	nc -l localhost 1337 | espeak
-done
