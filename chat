@@ -6,5 +6,7 @@ if [ -z $1 ]; then
 	echo ""
 	exit 1
 fi
-
+echo "Type what you wish, Ctrl+C to send the total message."
+echo "Run chat again to start a new message."
+echo ""
 nc $1 1337
